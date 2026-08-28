@@ -13,21 +13,20 @@
         <p>Tap to keep Ais awake through the movie.</p>
       </header>
 
-      <section id="openingScene" class="card">
+      <section id="openingScene" class="card intro-scene" role="button" tabindex="0" aria-label="Tap to advance dialogue">
         <h2>Opening Scene</h2>
-        <div class="couch-cast" aria-label="Friends on a couch">
-          <div class="friend">🧑‍🦱 John</div>
-          <div class="friend">🧑‍🎤 Saz</div>
-          <div class="friend">🧍 Ais</div>
-          <div class="friend">👩 Katie</div>
+        <div class="couch-scene" aria-label="4 friends on a couch">
+          <img
+            id="couchSceneImage"
+            src="assets/couch-scene.svg"
+            alt="John, Saz, Ais, and Katie sitting together on a couch for movie night."
+          />
         </div>
-        <div class="dialogue">
-          <p><strong>John:</strong> "Movie night! Five whole minutes of cinematic art. Think Ais stays awake?"</p>
-          <p><strong>Saz:</strong> "Last time the opening credits won in round one."</p>
-          <p><strong>Katie:</strong> "I give them... two yawns and a dramatic flop."</p>
-          <p><strong>Ais:</strong> "Rude. I am absolutely awake. Start the movie!"</p>
+        <div class="dialogue-box" aria-live="polite">
+          <p id="dialogueLine"></p>
+          <p id="dialogueHint" class="dialogue-hint">Tap to continue…</p>
         </div>
-        <button id="startBtn" class="btn btn-primary">🎬 Start Movie Challenge</button>
+        <button id="startBtn" class="btn btn-primary hidden">🎬 Start Movie Challenge</button>
       </section>
 
       <section id="gameScene" class="card hidden" aria-live="polite">
