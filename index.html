@@ -15,19 +15,18 @@
 
       <section id="openingScene" class="card">
         <h2>Opening Scene</h2>
-        <div class="couch-cast" aria-label="Friends on a couch">
-          <div class="friend">🧑‍🦱 John</div>
-          <div class="friend">🧑‍🎤 Saz</div>
-          <div class="friend">🧍 Ais</div>
-          <div class="friend">👩 Katie</div>
-        </div>
-        <div class="dialogue">
-          <p><strong>John:</strong> "Movie night! Five whole minutes of cinematic art. Think Ais stays awake?"</p>
-          <p><strong>Saz:</strong> "Last time the opening credits won in round one."</p>
-          <p><strong>Katie:</strong> "I give them... two yawns and a dramatic flop."</p>
-          <p><strong>Ais:</strong> "Rude. I am absolutely awake. Start the movie!"</p>
-        </div>
-        <button id="startBtn" class="btn btn-primary">🎬 Start Movie Challenge</button>
+        <figure class="opening-image-wrap">
+          <img
+            class="opening-image"
+            src="friends-on-couch.svg"
+            alt="John, Saz, Ais, and Katie sitting together on a couch for movie night"
+          />
+        </figure>
+        <button id="introAdvanceBtn" class="dialogue-box" type="button">
+          <p id="introDialogueLine"></p>
+          <p id="introHint" class="dialogue-hint">Tap to continue…</p>
+        </button>
+        <button id="startBtn" class="btn btn-primary hidden">🎬 Start Movie Challenge</button>
       </section>
 
       <section id="gameScene" class="card hidden" aria-live="polite">
