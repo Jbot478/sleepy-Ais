@@ -1,6 +1,9 @@
 const openingScene = document.getElementById("openingScene");
 const gameScene = document.getElementById("gameScene");
 const resultScene = document.getElementById("resultScene");
+const introAdvanceBtn = document.getElementById("introAdvanceBtn");
+const introDialogueLine = document.getElementById("introDialogueLine");
+const introHint = document.getElementById("introHint");
 const startBtn = document.getElementById("startBtn");
 const retryBtn = document.getElementById("retryBtn");
 const gameArea = document.getElementById("gameArea");
@@ -18,6 +21,28 @@ const SPAWN_INTERVAL_MS = 1650;
 const OBSTACLE_GAP = 170;
 
 let gameState = null;
+let introLineIndex = 0;
+const introDialogue = [
+  'John: "Movie night! Five whole minutes of cinematic art. Think Ais stays awake?"',
+  'Saz: "Last time the opening credits won in round one."',
+  'Katie: "I give them... two yawns and a dramatic flop."',
+  'Ais: "Rude. I am absolutely awake. Start the movie!"',
+];
+
+function updateIntroDialogue() {
+  introDialogueLine.textContent = introDialogue[introLineIndex];
+}
+
+function advanceIntroDialogue() {
+  if (introLineIndex >= introDialogue.length - 1) {
+    startBtn.classList.remove("hidden");
+    introHint.textContent = "Ready! Tap Start Movie Challenge.";
+    return;
+  }
+
+  introLineIndex += 1;
+  updateIntroDialogue();
+}
 
 function showScene(scene) {
   [openingScene, gameScene, resultScene].forEach((s) => s.classList.add("hidden"));
@@ -191,6 +216,8 @@ function startGame() {
   gameState.frameId = requestAnimationFrame(updateFrame);
 }
 
+updateIntroDialogue();
+introAdvanceBtn.addEventListener("click", advanceIntroDialogue);
 startBtn.addEventListener("click", startGame);
 retryBtn.addEventListener("click", startGame);
 gameArea.addEventListener("pointerdown", flap);

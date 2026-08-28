@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Four friends on a couch">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dfe8ff" />
+      <stop offset="100%" stop-color="#f8fbff" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" />
+  <rect x="90" y="240" width="620" height="120" rx="30" fill="#6b7ecf" />
+  <rect x="140" y="210" width="520" height="90" rx="20" fill="#8092de" />
+  <circle cx="220" cy="180" r="45" fill="#ffd6b3" />
+  <rect x="175" y="220" width="90" height="95" rx="25" fill="#7dbf86" />
+  <text x="220" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#1f2330">John</text>
+  <circle cx="360" cy="172" r="45" fill="#ffd6b3" />
+  <rect x="315" y="214" width="90" height="102" rx="25" fill="#c47ed9" />
+  <text x="360" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#1f2330">Saz</text>
+  <circle cx="500" cy="178" r="45" fill="#ffd6b3" />
+  <rect x="455" y="220" width="90" height="98" rx="25" fill="#f2a96d" />
+  <text x="500" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#1f2330">Ais</text>
+  <circle cx="640" cy="182" r="45" fill="#ffd6b3" />
+  <rect x="595" y="224" width="90" height="94" rx="25" fill="#83b8f0" />
+  <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#1f2330">Katie</text>
+</svg>

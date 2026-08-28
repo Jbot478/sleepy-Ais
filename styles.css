@@ -54,25 +54,39 @@ body {
   display: none;
 }
 
-.couch-cast {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
-  margin-bottom: 0.8rem;
+.opening-image-wrap {
+  margin: 0 0 0.8rem;
 }
 
-.friend {
-  background: #f1f4ff;
-  border: 1px solid #dce2ff;
+.opening-image {
+  width: 100%;
+  display: block;
   border-radius: 12px;
-  padding: 0.45rem;
-  text-align: center;
-  font-weight: 600;
+  border: 1px solid #dce2ff;
+  background: #edf2ff;
 }
 
-.dialogue p {
-  margin: 0.5rem 0;
-  line-height: 1.3;
+.dialogue-box {
+  width: 100%;
+  border: 1px solid #dce2ff;
+  background: #f7f9ff;
+  border-radius: 12px;
+  text-align: left;
+  padding: 0.75rem;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  font: inherit;
+}
+
+.dialogue-box p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.dialogue-hint {
+  margin-top: 0.5rem !important;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .btn {
